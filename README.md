@@ -1,86 +1,212 @@
-# 🏗️ Project Management Dashboard (2019–2020)
+# Powder Characterization of Ti-6Al-4V Powders (NS vs S)
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Power%20BI-F2C811?logo=powerbi&logoColor=black" />
-  <img src="https://img.shields.io/badge/Power%20Query-217346?logo=microsoftexcel&logoColor=white" />
-  <img src="https://img.shields.io/badge/DAX-0F6CBD?logo=powerbi&logoColor=white" />
-  <img src="https://img.shields.io/badge/Excel%20%2F%20CSV-1D6F42?logo=microsoftexcel&logoColor=white" />
   <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/Business%20Intelligence-5E35B1?logo=databricks&logoColor=white" />
+  <img src="https://img.shields.io/badge/Scanning%20Electron%20Microscopy%20(SEM)-00BFFF?logo=electron&logoColor=white" />
+  <img src="https://img.shields.io/badge/Energy%20Dispersive%20Spectroscopy%20(EDS)-00BFFF?logo=electron&logoColor=white" />
+  <img src="https://img.shields.io/badge/Optical%20Microscopy-4A7043?logo=materialdesign&logoColor=white" />
+  <img src="https://img.shields.io/badge/Hall%20Funnel%20Flowability-FF6F00?logo=3dprinter&logoColor=white" />
+  <img src="https://img.shields.io/badge/Tap%20Density%20Measurement-8B4513?logo=flask&logoColor=white" />
+  <img src="https://img.shields.io/badge/Materials%20Science-8B4513?logo=materialdesign&logoColor=white" />
+  <img src="https://img.shields.io/badge/Powder%20Metallurgy-4A7043?logo=flask&logoColor=white" />
+  <img src="https://img.shields.io/badge/Additive%20Manufacturing-FF6F00?logo=3dprinter&logoColor=white" />
+  <img src="https://img.shields.io/badge/ASTM%20Standards-2E8B57?logo=standard&logoColor=white" />
 </p>
 
 ---
 
-This dashboard analyzes project management performance in Nigeria between 2019 and 2020 using project-level data. The years are derived directly from the start, end, and planned dates in the dataset (e.g., start dates range from January 19, 2019, to October 1, 2020; end dates from March 12, 2019, to December 12, 2020; planned dates from February 21, 2019, to December 31, 2020). The goal is to evaluate budget utilization, project health, completion rates, and operational dynamics while identifying strategic improvement opportunities for project stakeholders.
+This project presents a comprehensive characterization and comparative analysis of **non-spheroidized (NS)** and **spheroidized (S)** Ti-6Al-4V alloy powders.
 
-## 🎯 Project Objective
+## 1. Introduction
 
-Provide business intelligence insights to support decisions regarding resource allocation, priority management, location strategies, and team performance. The dashboard answers key performance questions across time, project types, locations, and managers.
+Powder Characterization and Testing are essential for gaining a thorough understanding of the physical and technological properties of powders, contributing to the optimization of processes and the assurance of quality outcomes. This report investigates key aspects of powders, including flowability, density, morphology, and chemical composition, aiming to provide comprehensive insights.
 
-## 📁 Dataset Used
+## 2. Objectives
 
-Dataset consisted of 97 entries representing 57 unique projects (some projects have multiple entries, likely for subtasks or phases), structured as a single table with project details including budgets, dates, managers, types, statuses, and more.  
+This study aims to conduct a thorough comparison between spheroidized and non-spheroidized powders by analyzing their flowability, tap density, morphology, and chemical composition. Flowability testing will assess the ease of powder flow, while tap density measurements will evaluate packing efficiency. Morphological analysis will examine particle size distribution and shape consistency, utilizing SEM imaging and laser diffraction. Chemical composition will be compared using SEM-EDS to quantify elemental makeup and distribution. This comprehensive approach will provide valuable insights into the physical, morphological, and chemical properties of the powders, aiding in informed decision-making for diverse industrial applications.
 
-Dataset Link: <a href="(PROJECT2) Project Management Data.csv">Dataset</a>
+## 3. Powder Types and Manufacturing Processes
 
-## ❓ Questions (KPIs)
+The two powders that are studied in this paper are: non-spheroidized and spheroidized Ti6Al4V alloy.
 
-Core KPI questions explored:  
-How did budgets and expenses evolve over time?  
-Which project types and locations consumed the most budget and expenses?  
-Which managers and priorities showed the best completion rates?  
-How do project statuses, health, and delays affect overall performance?
+■ Non spheroidized powder (NS) has been manufactured using the Gas Atomization technology; a process that takes a melted sample of a metal alloy and creates a melt stream. The melt stream is then impinged with a powerful atomization gas that causes dispersion and creates particles. The particles or droplets then fall and cool as they make contact with a substrate or metal plate.
 
-Calculated KPI metrics included:
+■ Spheroidized powder (S) has been produced by Plasma Spheroidization; this process begins with gas atomization, where molten metal is atomized into fine droplets using a high-velocity gas stream, which is then introduced into a chamber where it comes into contact with a high-temperature plasma torch. The extreme heat generated by the plasma torch causes rapid heating of the powder. As the molten material moves through the plasma flame, surface tension forces act to round off irregularities and reshape the particles into more spherical forms. Powders fabricated by PS have many advantages such as high spheroidization ratio, narrow size distribution and good flowability.
 
-• Total Budget  
-• Total Expenses & Utilization %  
-• Delayed Projects  
-• Over Budget Projects  
-• Average % Complete  
-• Project Counts by Status/Health
+## 4. Flowability
 
-## ⚙️ Process
+The flowability of a powder stands as a pivotal element influencing the effectiveness of Additive Manufactured parts. For this study, a titanium alloy (Ti-6Al-4V) in two different conditions was studied: not spheroidized (prepared by gas atomization) and spheroidized (prepared by plasma spheroidization). Measurement was done using a Hall funnel following ASTM B 213 standard.
 
-1. Data Preparation (Power Query/Excel): data cleaning, date parsing, type standardization, handling duplicates for unique project analysis  
-2. Data Modeling: tabular schema with calculated fields, grouping by unique project names where applicable  
-3. KPI Logic (DAX/Formulas): metrics & calculations developed  
-4. Exploratory + Comparative Analytics: trends, types, geography, and manager segments  
-5. Visualization (Power BI): interactive dashboard for executives & analysts
+![Hall Funnel](https://github.com/wisemansg/powdercharacterization/raw/main/assets/Hall%20funnel%20for%20flowability%20measurement.jpeg)
 
-## 🖥️ Dashboard
+**Figure 1**: Hall funnel for flowability measurement
 
-![Screenshot (495)](PHS.png)
+![Flowability Results](https://github.com/wisemansg/powdercharacterization/raw/main/assets/Flowability%20measured%20for%20Ti-6Al-4V%20powders%20(NS%20and%20S).jpeg)
 
-## 📊 Project Insights
+**Figure 2**: Flowability measured for Ti-6Al-4V powders (NS and S)
 
-Budget & Expense Behavior: Total budget allocated was approximately $1.05M (rounded to $1M in the visual) with expenses at $637K (60.4% utilization); the average project schedule was 172 days, with an average completion rate of 53%. There were 12 delayed projects (where end date exceeded planned date) and 11 over-budget instances. Majority of activity occurred in 2019, with extensions into 2020.
+**Table 1: Flowability values and its measurement error**
 
-Type Performance: Building Construction dominated with 38 unique projects, $429,660 budget, and $183,195 expenses (average schedule 168 days); Transformer Installation had 11 unique projects, $192,700 budget, $110,590 expenses; Borehole & Reticulation: 8 unique, $122,900 budget, $87,740 expenses; Road Construction: 7 unique, $134,265 budget, $102,720 expenses; Supplies: 5 unique, $91,835 budget, $88,435 expenses; Rehabilitation: 3 unique, $83,400 budget, $64,300 expenses. As shown in the visual's bar chart, project counts by type and priority highlight Building Construction as the most frequent (stacked count ~11 in the filtered view).
+| Powder         | Flowability (s/50 g)    |
+|----------------|-------------------------|
+| Ti-6Al-4V (NS) | 37.736 ± 2.935         |
 
-Location Performance: Lagos had the highest row count (30 entries, 21 unique projects) but lower budget ($192,250) compared to Abuja ($307,230 budget, $101,925 expenses, 10 unique); Kano led expenses ($239,825) with $287,870 budget (11 unique); Borno: $130,750 budget, $104,710 expenses (11 unique); Uyo: $98,085 budget, $75,790 expenses (5 unique); Rivers: $21,000 budget, $22,250 expenses (2 unique); Sokoto: $17,575 budget, $10,000 expenses (2 unique). The map visual emphasizes Lagos and Kano as key hubs with larger bubbles.
+Spheroidized powder (S) has better flowability (lower value).
 
-Manager & Status Behavior: Ema Ekpo managed the most (35 entries, 28 unique projects, $307,205 budget, $199,885 expenses, avg. 54.6% complete); Dave Chieke: 21 entries, 10 unique, $342,275 budget, $156,095 expenses, 56.5% complete; Abdul Rex: 11 entries, 9 unique, $71,200 budget, $42,790 expenses, 49.4% complete; Sarah Boulos: 9 entries, 8 unique, $116,530 budget, $85,550 expenses, 27.2% complete; James Seun: 8 entries, 7 unique, $57,300 budget, $42,050 expenses, 85.8% complete (highest avg. completion); Cinci Momoh: 8 entries, 8 unique, $28,210 budget, $19,390 expenses, 53.9% complete; Vivian Ade: 5 entries, 4 unique, $132,040 budget, $91,220 expenses, 27.8% complete. Statuses: In Progress (47 entries), Completed (19), Planned (18), On Hold (8), Cancelled (5)—aligning with the pie chart's distribution (e.g., In Progress as the largest segment ~30-34%). Health: On Track (58), Needs Attention (27), Not Set (12). The bar chart in the visual confirms budget/expense breakdowns by manager.
+## 5. Apparent and Tap Density
 
-Additional Insights: Projects like "Classroom Arrangement" appear 11 times (likely phased), "Research Offices" 7 times, indicating multi-entry tracking for larger initiatives. High-priority projects (visual's priority colors: 1-5) are distributed across types, with Building Construction showing diverse priorities. Opportunities for improvement include addressing delays in 12% of entries and over-budget in 11%, particularly in high-expense locations like Kano. The table in the visual highlights specific examples, such as low-completion projects (e.g., Training Room at 0.14%) starting in mid-2019, suggesting potential bottlenecks in execution phases.
+![Tapping Apparatus](https://github.com/wisemansg/powdercharacterization/raw/main/assets/Tapping%20apparatus%20for%20measuring%20tap%20density.jpeg)
 
-## ✅ Final Conclusion
+**Figure 3**: Tapping apparatus for measuring tap density
 
-Projects demonstrated moderate completion (53% average) with strong on-track health (58 entries) but challenges in delays (12), over-budget (11), and needs attention (27). The 2019-2020 focus showed peak activity in 2019, with Building Construction as a core driver but higher utilization in Transformer Installation. Opportunities lie in enhancing budget controls in expense-heavy areas like Kano, boosting completion rates for lower-performing managers (e.g., Sarah Boulos and Vivian Ade), and streamlining multi-phase projects to reduce delays and improve overall efficiency.
+![Tap Density Results](https://github.com/wisemansg/powdercharacterization/raw/main/assets/Tap%20density%20measured%20for%20Ti-6Al-4V%20powders%20(NS%20and%20S).jpeg)
 
-## 🛠️ Tools Used
+**Figure 4**: Tap density measured for Ti-6Al-4V powders (NS and S)
 
-Power BI · Power Query · DAX · Excel/CSV · Python (EDA)
+**Table 2: Apparent and Tap densities measured and its packing factor**
 
-## 🚀 Live Dashboard Link
+| Powder          | Apparent density (g/cm³) | Tap density (g/cm³) | Carr’s index (%) | Hausner ratio | Flowability |
+|-----------------|---------------------------|---------------------|------------------|---------------|-------------|
+| Ti-6Al-4V (NS)  | 2.131 ± 0.037            | 2.489 ± 0.016      | 14.37            | 1.17          | Good        |
+| Ti-6Al-4V (S)   | 2.440 ± 0.000            | 2.753 ± 0.029      | 11.38            | 1.13          | Good        |
 
-https://app.powerbi.com/view?r=EXAMPLE_DUMMY_LINK
+## 6. Morphology
 
-## 📦 Repository Structure
+### Particle Image Analysis Setup
 
-project-management-dashboard/ → README.md, project_dashboard.pbix, project_data.csv, data_cleaning.ipynb, assets/screenshots/
+![Microscope Setup](https://raw.githubusercontent.com/wisemansg/powdercharacterization/main/assets/a%29%20Vacuum%20system%20for%20particle%20uniform%20spreading%20b%29%20Microscope%20for%20particle%20image%20analysis.jpeg)
 
-## 👤 Author
+**Figure 5**: a) Vacuum system for particle uniform spreading b) Microscope for particle image analysis
 
-Wiseman Siriro
+### Particle Size Distribution
 
+![NS Size](https://github.com/wisemansg/powdercharacterization/raw/main/assets/Diameter%20size%20distribution%20for%20gas%20atomized%20powder%20(NS).jpeg)
+
+**Figure 6**: Diameter size distribution for gas atomized powder (NS)
+
+![S Size](https://github.com/wisemansg/powdercharacterization/raw/main/assets/Diameter%20size%20distribution%20for%20spheroidized%20powder%20(S).jpeg)
+
+**Figure 7**: Diameter size distribution for spheroidized powder (S)
+
+### Particle Shape
+
+![NS Shape](https://github.com/wisemansg/powdercharacterization/raw/main/assets/Shape%20distributions%20for%20gas%20atomized%20powder%20(NS).jpeg)
+
+**Figure 8**: Shape distributions for gas atomized powder (NS)
+
+![S Shape](https://github.com/wisemansg/powdercharacterization/raw/main/assets/Shape%20distributions%20for%20spheroidized%20powder%20(S).jpeg)
+
+**Figure 9**: Shape distributions for spheroidized powder (S)
+
+## 7. Material Characterization
+
+### Identification of the powder type
+
+![Microscopic View of Powder Sample NS](https://raw.githubusercontent.com/wisemansg/powdercharacterization/main/assets/Microscopic%20view%20of%20powder%20sample%20NS%20a%29%20BSE%20b%29%20SE.jpeg)
+
+**Figure 10**: Microscopic view of powder sample NS a) BSE b) SE
+
+![Microscopic View of Powder Sample S](https://raw.githubusercontent.com/wisemansg/powdercharacterization/main/assets/Microscopic%20view%20of%20powder%20sample%20S%20%20c%29%20BSE%20d%29%20SE%20.jpeg)
+
+**Figure 11**: Microscopic view of powder sample S c) BSE d) SE
+
+### Chemical composition
+
+![NS Zones](https://github.com/wisemansg/powdercharacterization/raw/main/assets/(a)%20Identification%20of%20Zones%20(b)%20Material%20Characterization%20graph%20Zone%208%20(c)%20Material%20characterization%20graph%20Zone%209.jpeg)
+
+**Figure 12**: (a) Identification of Zones (b) Material Characterization graph Zone 8 (c) Material characterization graph Zone 9
+
+![NS Comparison](https://github.com/wisemansg/powdercharacterization/raw/main/assets/Material%20Characteristic%20data%20comparison%20between%20Zone%208%20and%20Zone%209.jpeg)
+
+**Figure 13**: Material Characteristic data comparison between Zone 8 and Zone 9
+
+**Table 3: Chemical composition parameters (NS)**
+
+| Element       | Atomic No. | Netto   | Mass (%) | Mass Normal (%) | Atom (%) | Abs error (%) (1σ) | Rel. error (%) (1σ) |
+|---------------|------------|---------|----------|-----------------|----------|--------------------|---------------------|
+| Titanium (Z8) | 22         | 135150  | 83.12    | 90.73           | 87.49    | 2.34               | 2.81                |
+| Aluminum (Z8) | 13         | 9506    | 4.68     | 5.11            | 8.74     | 0.26               | 5.64                |
+| Vanadium (Z8) | 23         | 5776    | 3.81     | 4.16            | 3.77     | 0.19               | 4.96                |
+| Titanium (Z9) | 22         | 137800  | 81.44    | 90.49           | 86.77    | 2.29               | 2.81                |
+| Aluminum (Z9) | 13         | 9131    | 5.24     | 5.82            | 9.90     | 0.29               | 5.59                |
+| Vanadium (Z9) | 23         | 5186    | 3.32     | 3.69            | 3.32     | 0.18               | 5.34                |
+
+![S Zones](https://github.com/wisemansg/powdercharacterization/raw/main/assets/(a)%20Identification%20of%20zones%2C%20(b)%20Material%20Characterization%20graph%20Zone%2010%2C%20(c)%20Material%20characterization%20graph%20Zone%2011.jpeg)
+
+**Figure 14**: (a) Identification of zones, (b) Material Characterization graph zone 10, (c) Material characterization graph zone 11
+
+![S Comparison](https://github.com/wisemansg/powdercharacterization/raw/main/assets/Material%20Characteristic%20data%20comparison%20between%20Zone%2010%20and%20Zone%2011.jpeg)
+
+**Figure 15**: Material Characteristic data comparison between Zone 10 and Zone 11
+
+**Table 4: Chemical composition parameters (S)**
+
+| Element        | Atomic No. | Netto   | Mass (%) | Mass Normal (%) | Atom (%) | Abs error (%) (1σ) | Rel. error (%) (1σ) |
+|----------------|------------|---------|----------|-----------------|----------|--------------------|---------------------|
+| Titanium (Z10) | 22         | 132057  | 79.5     | 89.7            | 85.8     | 2.24               | 2.82                |
+| Aluminum (Z10) | 13         | 11114   | 5.5      | 6.2             | 10.5     | 0.30               | 5.51                |
+| Vanadium (Z10) | 23         | 5866    | 3.7      | 4.2             | 3.7      | 0.18               | 4.94                |
+| Titanium (Z11) | 22         | 133182  | 76.8     | 89.4            | 85.5     | 2.16               | 2.82                |
+| Aluminum (Z11) | 13         | 10317   | 5.3      | 6.2             | 10.6     | 0.30               | 5.55                |
+| Vanadium (Z11) | 23         | 5984    | 3.7      | 4.4             | 3.9      | 0.18               | 4.89                |
+
+## 8. Conclusions
+
+■ In powder characterization literature, in which the gas atomization and the plasma spheroidization processes are compared, plasma spheroidization produces generally smaller powder particles, as well as more rounded ones; opposed to gas atomization which provides bigger particles with some satellites. However, when examining the results for the densities as well as flowability, in literature, both powders have quite similar results for flowability and densities, with plasma spheroidization having slightly lower flowability time and higher apparent density than gas atomization.
+
+■ We observed a difference between NS and S powders. With the spheroidized powder obtaining better results in terms of flowability and tap density. This can be due to its reduced surface area, uniform shape, better packing efficiency, less segregation and better dispersion of the particles. This causes spheroidized powder to have better manufacturing efficiency, higher product quality and enhanced cost-effectiveness.
+
+■ The comparison between NS and S powders highlights their contrasting particle size distributions and shape uniformity, emphasizing the distinct influence of the spheroidization process on enhancing particle geometries. Spheroidization demonstrates an excellent capability in improving particle shapes...
+
+■ The distinction between spheroidized and non-spheroidized powder was discerned through SEM analysis, where the presence of numerous small satellite particles surrounding larger particles was observed. Additionally, the nuanced variations in chemical composition between different zones of the powders, with variations observed in Titanium, Aluminum, and Vanadium content. Absolute errors associated with the measurements were consistently low, indicating reliable data collection.
+
+## Applications of Powder Characterization in Real-World Applications
+
+Powder characterization is essential across many high-performance industries. Key real-world applications include:
+
+- **Additive Manufacturing (3D Printing)**: Ensures reliable powder spreading and melting behavior.
+- **Aerospace**: Turbine blades, engine parts, and structural components.
+- **Medical**: Orthopedic implants and dental prosthetics.
+- **Automotive**: Lightweight high-strength parts.
+- **Quality Control & Research**: Batch validation and process development.
+
+## Repository Structure
+
+```text
+powdercharacterization/
+├── README.md
+├── assets/
+│   ├── (a) Identification of Zones (b) Material Characterization graph Zone 8 (c) Material Characterization graph Zone 9.jpeg
+│   ├── (a) Identification of zones, (b) Material Characterization graph Zone 10, (c) Material Characterization graph Zone 11.jpeg
+│   ├── Diameter size distribution for gas atomized powder (NS).jpeg
+│   ├── Diameter size distribution for spheroidized powder (S).jpeg
+│   ├── Flowability measured for Ti-6Al-4V powders (NS and S).jpeg
+│   ├── Hall funnel for flowability measurement.jpeg
+│   ├── Material Characteristic data comparison between Zone 10 and Zone 11.jpeg
+│   ├── Material Characteristic data comparison between Zone 8 and Zone 9.jpeg
+│   ├── Microscopic view of powder sample NS a) BSE b) SE.jpeg
+│   ├── Microscopic view of powder sample S c) BSE d) SE.jpeg
+│   ├── Shape distributions for gas atomized powder (NS).jpeg
+│   ├── Shape distributions for spheroidized powder (S).jpeg
+│   ├── Tap density measured for Ti-6Al-4V powders (NS and S).jpeg
+│   ├── Tapping apparatus for measuring tap density.jpeg
+│   └── a) Vacuum system for particle uniform spreading b) Microscope for particle image analysis.jpeg
+```
+
+### Folder Description
+
+| File | Description |
+|--------|-------------|
+| Identification of Zones & Material Graphs | Zone identification and material analysis for Zones 8, 9, 10, and 11. |
+| Diameter Size Distribution (NS) | Particle size distribution of gas atomized Ti-6Al-4V powder. |
+| Diameter Size Distribution (S) | Particle size distribution of spheroidized Ti-6Al-4V powder. |
+| Flowability Measurement | Comparison of powder flowability between gas atomized and spheroidized powders. |
+| Hall Funnel | Experimental setup used for flowability testing. |
+| Material Characteristic Data Comparison | Comparative material characterization results between selected zones. |
+| Microscopic View (NS) | BSE and SE micrographs of gas atomized powder particles. |
+| Microscopic View (S) | BSE and SE micrographs of spheroidized powder particles. |
+| Shape Distribution (NS) | Morphological analysis of gas atomized powder particles. |
+| Shape Distribution (S) | Morphological analysis of spheroidized powder particles. |
+| Tap Density Measurement | Comparison of tap density values for both powder conditions. |
+| Tapping Apparatus | Equipment used for tap density measurements. |
+| Vacuum System & Microscope | Experimental setup used for particle spreading and image acquisition. |
